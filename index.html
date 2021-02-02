@@ -4,7 +4,24 @@
   <meta charset="utf-8">
   <title>PureJS</title>
   <script type="text/html" id="home">
-    <h1>Start <%= where %>!</h1>
+    <div>
+      <h1>Login</h1>
+      <form>
+        <div>
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username">
+          <span id="username-validation-message"></span>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password"> 
+          <span id="password-validation-message"></span>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
   </script>
   <script type="text/html" id="example1">
     <h1><%= title %></h1>

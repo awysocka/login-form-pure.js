@@ -1,7 +1,7 @@
 import { route } from './router';
 
 route('/', 'home', function() {
-  this.where = 'here';
+  // this.where = 'here';
 });
 
 route('/ex1', 'example1', function() {
