@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>PureJS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <script type="text/html" id="home">
     <div>
       <h1>Login</h1>
@@ -23,11 +24,12 @@
       </form>
     </div>
   </script>
-  <script type="text/html" id="example1">
-    <h1><%= title %></h1>
-    <% for (let i of title) { %>
-      <span><%= i %></span>
-    <% } %>
+  <script type="text/html" id="success">
+    <div>
+      <i class="fas fa-check"></i>
+      <h1><%= title %></h1>
+      <p>You have successfully signed into your account.</p>
+    </div>
   </script>
   <script type="text/html" id="example2">
     <h1><%= title %></h1>
@@ -40,7 +42,7 @@
 <body>
   <nav>
     <a href="#">home</a>
-    <a href="#/ex1">example 1</a>
+    <a href="#/success">success</a>
     <a href="#/ex2">example 2</a>
   </nav>
   <div id="app"></div>

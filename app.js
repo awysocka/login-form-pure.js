@@ -4,8 +4,8 @@ route('/', 'home', function() {
   // this.where = 'here';
 });
 
-route('/ex1', 'example1', function() {
-  this.title = 'Example 1';
+route('/success', 'success', function() {
+  this.title = 'Login successful!';
 });
 
 route('/ex2', 'example2', function() {
