@@ -1,4 +1,5 @@
 import { route } from './router';
+import './main.scss';
 
 route('/', 'home', function() {
   this.title = 'Login'
