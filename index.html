@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <script type="text/html" id="home">
     <div>
-      <h1>Login</h1>
-      <form>
+      <h1><%= title %></h1>
+      <form id="login-form">
         <div>
           <label for="username">Username</label>
           <input type="text" name="username" id="username">
@@ -18,6 +18,7 @@
           <input type="password" name="password" id="password"> 
           <span id="password-validation-message"></span>
         </div>
+        <span id="error-validation-message"></span>
         <div>
           <button type="submit">Submit</button>
         </div>
