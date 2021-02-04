@@ -1,0 +1,107 @@
+// LOGIN-FORM
+
+.login-form {
+    @include contentWrapper;
+
+    flex-grow: 1;
+    font-size: $font-size-s;
+    line-height: 1.5;
+    color: $color-dark-grey;
+
+    &__heading {
+        font-size: $font-size-m;
+        margin-bottom: 4rem;
+    }
+
+    &__element {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        background: linear-gradient(
+            to left bottom,
+            rgba(255,255,255,.7),
+            rgba(255,255,255,.5));
+        padding: 1.2rem;
+        border: 1px solid $color-grey;
+        border-radius: $border-radius;
+        font-size: $font-size-s;
+        transition: all .3s ease;
+
+        &--error {
+            border: 1px solid $color-red;
+        }
+    }
+
+    &__button {
+
+        button {
+            background-color: $color-purple;
+            padding: 1.2rem 2rem;
+            border: 1px solid $color-purple;
+            border-radius: .6rem;
+            color: $color-white;
+            font-size: $font-size-s;
+            transition: all .3s ease;
+        }
+    }
+
+    &__error {
+        font-size: 1.4rem;
+        color: $color-red;
+        line-height: 1.5;
+
+        &:empty::before {
+            content: "\200b";
+        }
+    }
+}
+
+.home-background-circle {
+    @include circle;
+
+    background: linear-gradient(
+        to left bottom, 
+        rgba(146,39,143,1),
+        rgba(146,39,143,.7));  
+    width: 18rem;
+    height: 18rem;
+    transform: translate(35%, -165%);
+}
+
+// MEDIA QUERIES 
+
+@include respond(tab-port) {
+
+    .login-form {
+        padding: 5rem 4rem; 
+        
+        input:focus {
+            outline: none;
+            border:1px solid $color-purple;
+        }
+
+        button:focus {
+            outline: none;
+            background-color: $color-dark-purple;
+        }
+    }
+}
+
+@include respond(not-touch-device) {
+
+    .login-form {
+        
+        input:hover {
+            outline: none;
+            border:1px solid $color-purple;
+        }
+
+        button:hover {
+            outline: none;
+            background-color: $color-dark-purple;
+            cursor: pointer;
+        }
+    }
+}

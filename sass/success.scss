@@ -1,0 +1,49 @@
+// SUCCESS PAGE
+
+.success-page {
+    @include contentWrapper;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-dark-grey;
+
+    &__icon {
+        font-size: $font-size-m*2;
+        color: $color-green;
+    }
+
+    &__heading {
+        font-size: $font-size-m;
+        color: $color-green;
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    &__description {
+        font-size: $font-size-s;
+        text-align: center;
+    }
+}
+
+.success-background-circle {
+    @include circle;
+
+    background: linear-gradient(
+        to left top, 
+        rgba(146,39,143,.7),
+        rgba(146,39,143,1));  
+    width: 15rem;
+    height: 15rem;
+    transform: translate(-155%, -125%);
+}
+
+// MEDIA QUERIES
+
+@include respond(tab-port) {
+
+    .success-page {
+        padding: 4rem 5rem;   
+    }
+}

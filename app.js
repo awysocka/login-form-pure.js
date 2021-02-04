@@ -1,5 +1,5 @@
 import { route } from './router';
-import './main.scss';
+import './sass/main.scss';
 
 route('/', 'home', function() {
   this.title = 'Login'
@@ -9,10 +9,12 @@ route('/', 'home', function() {
     const usernameValidationMessage = document.getElementById('username-validation-message');
 
     if (usernameInput.value == null || usernameInput.value === '') {
-      usernameValidationMessage.innerText = "Please enter the username."
+      usernameValidationMessage.innerText = "Please enter the username.";
+      usernameInput.classList.add('login-form__input--error');
       return false
     } else {
-      usernameValidationMessage.innerText = ""
+      usernameValidationMessage.innerText = "";
+      usernameInput.classList.remove('login-form__input--error');
       return true
     }
   }  
@@ -22,10 +24,12 @@ route('/', 'home', function() {
     const passwordValidationMessage = document.getElementById('password-validation-message');
 
     if (passwordInput.value == null || passwordInput.value === '') {
-      passwordValidationMessage.innerText = "Please enter the password."
+      passwordValidationMessage.innerText = "Please enter the password.";
+      passwordInput.classList.add('login-form__input--error');
       return false
     } else {
-      passwordValidationMessage.innerText = ""
+      passwordValidationMessage.innerText = "";
+      passwordInput.classList.remove('login-form__input--error');
       return true
     }
   }
@@ -59,6 +63,7 @@ route('/', 'home', function() {
         if (response.ok) {
           window.location.href = "#/success";
         } else if (response.status === 401) {
+          document.getElementById('password').classList.add('login-form__input--error')
           document.getElementById('password-validation-message').innerText = 'Wrong password!'
         } else {
           document.getElementById('error-validation-message').innerText = 'Oops! Something went wrong! Please try again later.'

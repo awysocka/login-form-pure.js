@@ -1,0 +1,33 @@
+@mixin circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+@mixin contentWrapper {
+    max-width: 36rem;
+    background: linear-gradient(
+        to left bottom,
+        rgba(255,255,255,.7),
+        rgba(255,255,255,.5));
+    border-radius: $border-radius;
+    padding: 4rem 2rem;
+    backdrop-filter: blur(.5rem);
+    z-index: 3;
+}
+
+@mixin respond($breakpoints) {
+    @if $breakpoints == phone {
+        @media screen and (max-width: 400px) {@content}
+    };
+    
+    @if $breakpoints == tab-port {
+        @media screen and (min-width: 650px) {@content}
+    };
+
+    @if $breakpoints == not-touch-device {
+        @media (hover: hover) {@content}
+    };
+}
