@@ -7,45 +7,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-  <script type="text/html" id="home">
-    <main>
-        <form class="login-form" id="login-form">
-          <h1 class="login-form__heading"><%= title %></h1>
-          <div class="login-form__element">
-            <label class="login-form__label" for="username">Username</label>
-            <input class="login-form__input" type="text" name="username" id="username">
-            <span class="login-form__error" id="username-validation-message"></span>
-          </div>
-          <div class="login-form__element">
-            <label class="login-form__label" for="password">Password</label>
-            <input class="login-form__input" type="password" name="password" id="password"> 
-            <span class="login-form__error" id="password-validation-message"></span>
-          </div>
-          <span class="login-form__error" id="error-validation-message"></span>
-          <div class="login-form__element login-form__button">
-            <button type="submit">Login</button>
-          </div>
-        </form>
-        <div class="home-background-circle"></div>
-    </main>
-  </script>
-  <script type="text/html" id="success">
-    <main>
-      <div class="success-page">
-        <i class="fas fa-check success-page__icon"></i>
-        <h1 class="success-page__heading"><%= title %></h1>
-        <p class="success-page__description">You have successfully signed into your account.</p>
-      </div>
-      <div class="success-background-circle"></div>
-    </main>
-  </script>
-  <script type="text/html" id="example2">
-    <h1><%= title %></h1>
-    <button class="my-button">Click me <%= counter %></button>
-  </script>
-  <script type="text/html" id="404">
-    <h1>404 Not found</h1>
-  </script>
+  <script type="text/html" id="home"></script>
+  <script type="text/html" id="success"></script>
+  <script type="text/html" id="404"></script>
 </head>
 <body>
   <div id="app"></div>

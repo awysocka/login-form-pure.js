@@ -1,8 +1,14 @@
 import { route } from './router';
 import './sass/main.scss';
+import homeView from './views/home.html';
+import successView from './views/success.html';
+import notFoundView from './views/404.html';
+
 
 route('/', 'home', function() {
   this.title = 'Login'
+
+  document.getElementById("home").innerHTML = homeView;
 
   function usernameInputValidation() {
     const usernameInput = document.getElementById('username');
@@ -79,15 +85,10 @@ route('/', 'home', function() {
 
 route('/success', 'success', function() {
   this.title = 'Login successful!';
+
+  document.getElementById("success").innerHTML = successView;
 });
 
-route('/ex2', 'example2', function() {
-  this.title = 'Example 2';
-  this.counter = 0;
-  this.$on('.my-button', 'click', () => {
-    this.counter += 1;
-    this.$refresh();
-  });
+route('*', '404', function () {
+  document.getElementById("404").innerHTML = notFoundView;
 });
-
-route('*', '404', function () {});
